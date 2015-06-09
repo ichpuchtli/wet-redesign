@@ -53,7 +53,7 @@
       <!-- Targets of toggling must have the toggle-target class so we can detect clicks outside of the target -->
       <div class="mobile-nav toggle-target" id="navbar">
         <ul>
-          <li class="active"><a href="/">Home</a>
+          <li><a href="/">Home</a>
           </li>
           <li class="mobile-dropdown">
             <!-- Another instance of the toggle class mechanism -->
@@ -86,7 +86,7 @@
           </li>
           <li><a href="gallery.html">Gallery</a>
           </li>
-          <li><a href="contact.html"><i class="fa fa-phone"></i>  Contact</a>
+          <li class="active"><a href="contact.html"><i class="fa fa-phone"></i>  Contact</a>
           </li>
         </ul>
       </div>
@@ -95,62 +95,42 @@
     <!-- .container -->
   </nav>
 
-  <!-- Owlcarousel2 Instance cycling through each div  note this is only visible on desktops -->
-  <div id="carousel-pager" class="owl-carousel visible-desktop">
-    <!-- Each banner has an image and a caption -->
-    <div class="banner">
-      <img alt="banner1" src="./images/banner1.png">
-      <p>Banner 1 Caption</p>
-    </div>
-    <div class="banner">
-      <img alt="banner2" src="./images/banner2.png">
-      <p>Banner 2 Caption</p>
-    </div>
-    <div class="banner">
-      <img alt="banner3" src="./images/banner3.png">
-      <p>Banner 3 Caption</p>
-    </div>
-    <div class="banner">
-      <img alt="banner4" src="./images/banner4.png">
-      <p>Banner 4 Caption</p>
-    </div>
-    <div class="banner">
-      <img alt="banner5" src="./images/banner5.png">
-      <p>Banner 5 Caption</p>
-    </div>
-  </div>
-
   <!-- This banner is visible only tablet and mobile, opposite to the owlcarousel instance -->
   <!-- This is to reduce page load and page complexity on smaller devices -->
-  <div class="header banner visible-tablet visible-mobile">
-    <img alt="hero banner" src="./images/banner2.png">
-    <p>Banner 5 Caption</p>
+  <div class="header banner">
+    <img alt="hero banner" src="images/banner1.png">
+    <p>Contact Us</p>
   </div>
 
   <!-- Main Content Container -->
   <div class="container">
-    <div class="col col-desktop-4 col-tablet-6">
+    <div class="col col-tablet-6">
       <div class="card">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn" href="#">View details &raquo;</a>
+        <h2>Contact Details</h2>
+        <p><i class="fa fa-envelope-o"></i> Email: support@website.com</p>
+        <p><i class="fa fa-phone"></i> Phone: 0400000000</p>
+        <p></p>
+        <p></p>
         </p>
       </div>
     </div>
-    <div class="col col-desktop-4 col-tablet-6">
+    <div class="col col-tablet-6">
       <div class="card">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn" href="#">View details &raquo;</a>
-        </p>
-      </div>
-    </div>
-    <div class="col col-desktop-4 col-tablet-6">
-      <div class="card">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn" href="#">View details &raquo;</a>
-        </p>
+        <h2>Contact Form</h2>
+        <form>
+          <p>
+            <input name="name" placeholder="Name">
+          </p>
+          <p>
+            <input name="business" placeholder="Company Name">
+          </p>
+          <p>
+            <textarea name="message" placeholder="Message"></textarea>
+          </p>
+          <p>
+            <button type="submit" class="btn"><i class="fa fa-send"></i> Send</button>
+          </p>
+        </form>
       </div>
     </div>
   </div>
