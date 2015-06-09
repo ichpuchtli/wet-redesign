@@ -40,5 +40,32 @@ $(document).ready(function () {
 
   });
 
+  
+  $('a.toggle-thumbnail').click(function() {
+    
+    var imgURL = $(this).children('img').prop('src');
+    
+    var captionText = $(this).children('p').text();
+    
+    var $closeBtn = $('<a href="#" class="close">Close <i class="fa fa-times"></i></a>');
+   
+    $closeBtn.click(function() {
+      $('#preview, #background').remove();
+    });
+    
+    var $img = $('<img src="' + imgURL + '">');
+    var $caption = $('<p>' + captionText + '</p>');
+    
+    var $preview = $('<div id="preview"/>').append($img).append($caption).append($closeBtn);
+    
+    $preview.click(function() {
+      $('#preview, #background').remove();
+    });
+    
+    $('body').append($preview);
+    
+    $preview.fadeIn();
+    
+  });
 
 });

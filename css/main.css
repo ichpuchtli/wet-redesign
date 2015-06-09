@@ -450,3 +450,31 @@ textarea {
     text-align: center;
 }
 
+
+/* Simplie lightbox like image preview implementation */
+
+#preview {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	z-index: 9999;
+	display: none; 
+	background-color: rgba(0,0,0,0.8);
+	padding: 3.5% 3% 0 3%;
+}
+
+#preview > img {
+  width: 100%;
+}
+
+#preview > p {
+  padding-left:10px;
+  font-size: 18px;
+  float:left;
+}
+
+#preview > a {
+  float:right;
+  padding-right: 10px;
+  font-size: 18px;
+}
