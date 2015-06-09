@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+$(document).ready(function () {
 
   $(".owl-carousel").owlCarousel({
     items: 1,
@@ -11,33 +11,31 @@ jQuery(document).ready(function () {
     dotsEach: false,
     lazyload: false,
     autoplay: true,
-    autoplayHoverPause: true,
+    autoplayHoverPause: true
   });
 
 
-  $('.mobile-nav-toggle, .mobile-dropdown-toggle').click(function () {
+  $('.toggle').click(function () {
 
-    var $btn = $(this);
+    var $toggleBtn = $(this);
 
-    var $navbar = $($btn.data('target'));
+    var $toggleTarget = $($toggleBtn.data('target'));
 
-    $navbar.slideToggle();
+    $toggleTarget.toggleClass('down');
+    $toggleTarget.slideToggle();
 
   });
 
-  $(document).mouseup(function (e) {
+  // Bind to the mouseup event in the document
+  $(document).mouseup(function (event) {
 
-    // and the thing we've clicked is not a descendent of the dropdown
-    var $dropdown = $('.mobile-dropdown-menu');
+    var $clickTarget = $(event.target);
 
-    if ($dropdown.is(":visible") && $(e.target).parents('.mobile-dropdown').length == 0) {
-      $dropdown.hide();
-    }
+    var $toggleComponents = $clickTarget.parents('.toggle-target, .toggle');
 
-    var $nav_dropdown = $('.mobile-nav');
-
-    if ($(e.target).parents('nav').length == 0) {
-      $nav_dropdown.hide();
+    // Only hide the menus if the user clicks outside of the range of the menus
+    if ($toggleComponents.length === 0) {
+      $('.toggle-target.down').slideUp().removeClass('down');
     }
 
   });
