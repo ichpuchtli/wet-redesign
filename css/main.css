@@ -31,6 +31,7 @@ footer {
   position: absolute;
   margin-top: 30px;
   padding-bottom: 20px;
+  background-color: #333; /* Fallback for IE6-8 */
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
 }
@@ -118,12 +119,14 @@ p {
 }
 
 .mobile-dropdown-menu .seperator {
+  background-color: #333; /* Fallback for IE6-8 */
   background-color: rgba(255, 255, 255, 0.2);
   height: 1px;
   margin: 10px 0;
 }
 
 .mobile-dropdown-menu {
+  background-color: #333; /* Fallback for IE6-8 */
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 100%;
@@ -312,6 +315,7 @@ p {
 }
 
 .card {
+  background-color: #333; /* Fallback for IE6-8 */
   background-color: rgba(0, 0, 0, 0.20);
   padding: 10px 15px;
   margin: 15px 0;
@@ -324,6 +328,7 @@ p {
 }
 
 nav {
+  background-color: #333; /* Fallback for IE6-8 */
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   z-index: 10;
@@ -347,6 +352,7 @@ input, textarea {
   color: #fff;
   font-family: inherit;
   font-weight:100;
+  background-color: #111; /* Fallback for IE6-8 */
   background-color: rgba(0, 0, 0, 0.2);
   font-size: inherit;
 }
@@ -367,6 +373,7 @@ textarea:hover,
 button:hover,
 button:focus
 {
+  background-color: #000; /* Fallback for IE6-8 */
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -378,6 +385,10 @@ button:focus
   display: block;
   padding: 10px 15px;
   position: relative;
+}
+
+img {
+  border: none;
 }
 
 img.thumbnail {
@@ -405,6 +416,7 @@ img.thumbnail {
   bottom: 0;
   margin: 20px;
   right: 30px;
+  background-color: #333; /* Fallback for IE6-8 */
   background-color: rgba(0, 0, 0, 0.75);
   color: #fff;
   font-size: 20px;
@@ -443,6 +455,7 @@ img.thumbnail {
 
 textarea {
     height: 150px;
+    overflow: auto;
 }
 
 .thumbnail-caption {
@@ -459,6 +472,7 @@ textarea {
 	height: 100%;
 	z-index: 9999;
 	display: none; 
+  background-color: #333; /* Fallback for IE6-8 */
 	background-color: rgba(0,0,0,0.8);
 	padding: 3.5% 3% 0 3%;
 }
