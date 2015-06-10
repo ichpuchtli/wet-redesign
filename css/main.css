@@ -13,10 +13,11 @@ body {
   font-family: 'Source Sans Pro', Verdana, Geneva, sans-serif;
   font-weight: 300;
   line-height: 1.42757143;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   /* Margin bottom by footer height */
-  margin-bottom: 700px;
+  
+  margin-bottom: 750px;
 }
 
 html {
@@ -31,7 +32,9 @@ footer {
   position: absolute;
   margin-top: 30px;
   padding-bottom: 20px;
-  background-color: #333; /* Fallback for IE6-8 */
+  background-color: #333;
+  /* Fallback for IE6-8 */
+  
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
 }
@@ -58,8 +61,8 @@ h5,
 h6 {
   font-weight: 400;
   line-height: 1.1;
-  margin-bottom:10px;
-  margin-top:10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 a {
@@ -81,7 +84,6 @@ p {
   font-weight: 100;
   margin-bottom: 10px;
 }
-
 /* Clearfix hack see http://nicolasgallagher.com/micro-clearfix-hack/ */
 
 .clearfix:before,
@@ -119,14 +121,18 @@ p {
 }
 
 .mobile-dropdown-menu .seperator {
-  background-color: #333; /* Fallback for IE6-8 */
+  background-color: #333;
+  /* Fallback for IE6-8 */
+  
   background-color: rgba(255, 255, 255, 0.2);
   height: 1px;
   margin: 10px 0;
 }
 
 .mobile-dropdown-menu {
-  background-color: #333; /* Fallback for IE6-8 */
+  background-color: #333;
+  /* Fallback for IE6-8 */
+  
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 100%;
@@ -139,7 +145,6 @@ p {
   list-style: none;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
-
 
 .col {
   width: 100%;
@@ -179,21 +184,19 @@ p {
 /* Nominal Tablet */
 
 @media(min-width: 768px) {
-  
   body {
     /* Margin bottom by footer height */
-    margin-bottom: 300px;
+    
+    margin-bottom: 350px;
   }
-  
-  .col, .container > p {
+  .col,
+  .container > p {
     padding-left: 15px;
     padding-right: 15px;
   }
-  
   a.logo {
     padding-left: 15px;
   }
-  
   .col-tablet-8 {
     width: 66.66666667%;
   }
@@ -236,7 +239,6 @@ p {
 }
 
 @media(max-width: 768px) {
-  
   .mobile-dropdown-menu {
     position: static;
     float: none;
@@ -297,17 +299,13 @@ p {
 /* Nominal Large Desktop */
 
 @media(min-width: 1200px) {
-  
   .container {
     width: 1160px;
   }
-  
   .header > img {
-      width: 100%;
+    width: 100%;
   }
-  
 }
-
 
 #carousel-pager {
   background-color: #fff;
@@ -315,11 +313,13 @@ p {
 }
 
 .card {
-  background-color: #333; /* Fallback for IE6-8 */
+  background-color: #333;
+  /* Fallback for IE6-8 */
+  
   background-color: rgba(0, 0, 0, 0.20);
   padding: 10px 15px;
   margin: 15px 0;
-  box-shadow: 3px 3px 2px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
 }
 
 .card h2 {
@@ -328,7 +328,9 @@ p {
 }
 
 nav {
-  background-color: #333; /* Fallback for IE6-8 */
+  background-color: #333;
+  /* Fallback for IE6-8 */
+  
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   z-index: 10;
@@ -341,20 +343,27 @@ nav {
   overflow: hidden;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
 }
 
-.btn, input, button, textarea {
-  padding: 6px 12px;
+.btn,
+input,
+button,
+textarea {
+  padding: 10px 12px;
   line-height: 1.4;
   border: 1px solid transparent;
   color: #fff;
   font-family: inherit;
-  font-weight:100;
-  background-color: #111; /* Fallback for IE6-8 */
+  font-weight: 100;
+  background-color: #111;
+  /* Fallback for IE6-8 */
+  
   background-color: rgba(0, 0, 0, 0.2);
-  font-size: inherit;
+  font-size: 18px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
 }
 
 .btn {
@@ -371,10 +380,11 @@ input:focus,
 textarea:focus,
 textarea:hover,
 button:hover,
-button:focus
-{
-  background-color: #000; /* Fallback for IE6-8 */
-  background-color: rgba(0, 0, 0, 0.3);
+button:focus {
+  background-color: #000;
+  /* Fallback for IE6-8 */
+  
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .mobile-nav > ul > li > a {
@@ -392,7 +402,7 @@ img {
 }
 
 img.thumbnail {
-  width:100%;
+  width: 100%;
 }
 
 .logo > img {
@@ -416,12 +426,14 @@ img.thumbnail {
   bottom: 0;
   margin: 20px;
   right: 30px;
-  background-color: #333; /* Fallback for IE6-8 */
+  background-color: #333;
+  /* Fallback for IE6-8 */
+  
   background-color: rgba(0, 0, 0, 0.75);
   color: #fff;
   font-size: 20px;
   padding: 15px;
-  box-shadow: 3px 3px 2px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
 }
 
 .banner {
@@ -443,38 +455,37 @@ img.thumbnail {
   color: #fff;
 }
 
-
 .mobile-dropdown {
   position: relative;
 }
 
 .container > p {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 textarea {
-    height: 150px;
-    overflow: auto;
+  height: 150px;
+  overflow: auto;
 }
 
 .thumbnail-caption {
-    margin-top: 0;
-    text-align: center;
+  margin-top: 0;
+  text-align: center;
 }
-
-
 /* Simplie lightbox like image preview implementation */
 
 #preview {
-	position: absolute;
-	top: 0;
-	height: 100%;
-	z-index: 9999;
-	display: none; 
-  background-color: #333; /* Fallback for IE6-8 */
-	background-color: rgba(0,0,0,0.8);
-	padding: 3.5% 3% 0 3%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+  background-color: #333;
+  /* Fallback for IE6-8 */
+  
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 3.5% 3% 0 3%;
 }
 
 #preview > img {
@@ -482,13 +493,33 @@ textarea {
 }
 
 #preview > p {
-  padding-left:10px;
+  padding-left: 10px;
   font-size: 18px;
-  float:left;
+  float: left;
 }
 
 #preview > a {
-  float:right;
+  float: right;
   padding-right: 10px;
   font-size: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+span.error {
+  margin-top: 5px;
+  display: block;
+  color: #fff;
+  visibility: hidden;
+}
+
+.dialog {
+  padding: 12px 0;
+  font-size: 18px;
+  display: none;
 }

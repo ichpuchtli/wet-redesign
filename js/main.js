@@ -40,32 +40,67 @@ $(document).ready(function () {
 
   });
 
-  
-  $('a.toggle-thumbnail').click(function() {
-    
+
+  $('a.toggle-thumbnail').click(function () {
+
     var imgURL = $(this).children('img').prop('src');
-    
+
     var captionText = $(this).children('p').text();
-    
-    var $closeBtn = $('<a href="#" class="close">Close <i class="fa fa-times"></i></a>');
-   
-    $closeBtn.click(function() {
-      $('#preview, #background').remove();
-    });
-    
+
+
     var $img = $('<img src="' + imgURL + '">');
     var $caption = $('<p>' + captionText + '</p>');
-    
+    var $closeBtn = $('<a href="#" class="close">Close <i class="fa fa-times"></i></a>');
+
     var $preview = $('<div id="preview"/>').append($img).append($caption).append($closeBtn);
-    
-    $preview.click(function() {
+
+    $preview.click(function () {
       $('#preview, #background').remove();
     });
-    
+
     $('body').append($preview);
-    
+
     $preview.fadeIn();
-    
+
+  });
+
+
+  $('.require-two-words').keyup(function () {
+
+    var $input = $(this);
+
+    var $error = $input.siblings('.error');
+
+    $error.css('visibility', $input.val().split(' ').length === 2 ? 'hidden' : 'visible');
+
+  });
+
+  $('.require-email').keyup(function () {
+
+    var $input = $(this);
+
+    var $error = $input.siblings('.error');
+
+    $error.css('visibility', /\S+@\S+\.\S+/.test($input.val()) ? 'hidden' : 'visible');
+
+  });
+
+  $('.require-max-400').keyup(function () {
+
+    var $input = $(this);
+
+    var $error = $input.siblings('.error');
+
+    $error.css('visibility', $input.val().length < 400 ? 'hidden' : 'visible');
+
+  });
+
+  $('form#contact').submit(function (e) {
+
+    e.preventDefault();
+
+    $('.dialog').slideToggle();
+
   });
 
 });
