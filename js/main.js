@@ -1,12 +1,19 @@
+//
+// Main Javascript File
+//
+
+
+// Bind to the DOMContentLoaded event which is fired when the dom is ready for manipulation
 $(document).ready(function () {
 
+  // Owl-Carousel2 carousel library
+  // See: http://owlcarousel.owlgraphic.com/
   $(".owl-carousel").owlCarousel({
     items: 1,
     loop: true,
     autoWidth: false,
     mergeFit: true,
     nav: false,
-    navText: ['next', 'prev'],
     dots: true,
     dotsEach: false,
     lazyload: false,
@@ -15,6 +22,9 @@ $(document).ready(function () {
   });
 
 
+  // Generic Toggling event handlers
+  // Usage: Add the toggle classic and a data attribute with a selector to the element to toggle
+  // <a href="#" class="toggle" data-target="#element">Toggle</a>
   $('.toggle').click(function () {
 
     var $toggleBtn = $(this);
@@ -26,12 +36,14 @@ $(document).ready(function () {
 
   });
 
-  // Bind to the mouseup event in the document
+  // Bind to the mouseup event in the document to hide toggled elements
   $(document).mouseup(function (event) {
 
+    // grab a jquery object of the event.target which is the selector of the element
+    // underneath the cursor on mouseup
     var $clickTarget = $(event.target);
 
-    var $toggleComponents = $clickTarget.parents('.toggle-target, .toggle');
+    var clickInsideToggleTarget = $clickTarget.parents('.toggle-target, .toggle').length > 0;
 
     // Only hide the menus if the user clicks outside of the range of the menus
     if ($toggleComponents.length === 0) {
@@ -55,7 +67,7 @@ $(document).ready(function () {
     var $preview = $('<div id="preview"/>').append($img).append($caption).append($closeBtn);
 
     $preview.click(function () {
-      $('#preview, #background').remove();
+      $('#preview').remove();
     });
 
     $('body').append($preview);

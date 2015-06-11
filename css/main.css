@@ -299,11 +299,17 @@ p {
 /* Nominal Large Desktop */
 
 @media(min-width: 1200px) {
+  
   .container {
     width: 1160px;
   }
+  
   .header > img {
     width: 100%;
+  }
+  
+  .header{
+    height: 420px
   }
 }
 
@@ -486,6 +492,7 @@ textarea {
   
   background-color: rgba(0, 0, 0, 0.8);
   padding: 3.5% 3% 0 3%;
+  width: 100%;
 }
 
 #preview > img {
