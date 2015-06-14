@@ -292,9 +292,7 @@ p {
   .container {
     width: 960px;
   }
-  .header {
-    background-size: 100%;
-  }
+
   .visible-desktop {
     display: block !important;
   }
@@ -311,13 +309,26 @@ p {
   }
   
   .header > img {
-    width: 100%;
+    height: 100%;
   }
   
   .header{
     height: 420px
   }
 }
+
+@media(min-width: 1540px) {
+  
+  .header > img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .header{
+    height: 420px
+  }
+}
+
 
 #carousel-pager {
   background-color: #fff;
