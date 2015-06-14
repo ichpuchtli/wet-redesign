@@ -532,21 +532,22 @@ span.error {
   display: none;
 }
 
-#sidebar {
-  width: 130px;
-  vertical-align: middle;
-  display: inline-block;
-}
-
 #sidebar > ul {
   list-style: none;
+  padding: 0;
 }
 
 #sidebar > ul > li {
-  background-color: rgba(0, 0, 0, 0.2);
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-#info {
-  vertical-align: middle;
-  display: inline-block;
+#sidebar > ul > li > a:hover,
+#sidebar > li > a:focus {
+  color: #ddd;
+  text-decoration: none;
+}
+
+#sidebar > ul > li > a:active {
+  background-color: rgb(35, 110, 187);
 }
