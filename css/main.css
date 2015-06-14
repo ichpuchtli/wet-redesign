@@ -531,3 +531,22 @@ span.error {
   font-size: 18px;
   display: none;
 }
+
+#sidebar {
+  width: 130px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#sidebar > ul {
+  list-style: none;
+}
+
+#sidebar > ul > li {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#info {
+  vertical-align: middle;
+  display: inline-block;
+}
