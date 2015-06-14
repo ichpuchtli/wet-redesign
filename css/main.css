@@ -339,6 +339,10 @@ p {
   font-weight: 300;
 }
 
+.card > img {
+  width: 100%;
+}
+
 nav {
   background-color: #333;
   /* Fallback for IE6-8 */
